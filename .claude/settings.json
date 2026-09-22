@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"\nconst skillMap = {\n  'next-best-practices': ['next', 'app router', 'rsc', 'server component', 'client component', 'routing', 'layout', 'page', 'loading', 'error', 'middleware', 'api route', 'route handler'],\n  'react-best-practices': ['component', 'hook', 'usestate', 'useeffect', 'usememo', 'usecallback', 'useref', 'react', 'props', 'state', 'render', 'jsx'],\n  'tailwind-css-patterns': ['tailwind', 'css', 'styling', 'classname', 'style', 'responsive', 'dark mode', 'animation', 'transition', 'flex', 'grid', 'padding', 'margin', 'color', 'typography'],\n  'typescript-advanced-types': ['typescript', 'type', 'interface', 'generic', 'enum', 'infer', 'utility type', 'mapped type', 'conditional type', 'zod'],\n  'accessibility': ['accessibility', 'a11y', 'wcag', 'aria', 'screen reader', 'keyboard', 'focus', 'contrast', 'alt text', 'accessible'],\n  'seo': ['seo', 'metadata', 'og', 'sitemap', 'robots', 'canonical', 'opengraph', 'search engine', 'meta'],\n  'composition-patterns': ['composition', 'compound', 'render prop', 'pattern', 'reusable', 'abstraction', 'slot'],\n  'next-cache-components': ['cache', 'isr', 'revalidate', 'static', 'dynamic', 'suspense', 'streaming', 'server action'],\n  'frontend-design': ['design', 'ui', 'ux', 'layout', 'visual', 'mockup', 'spacing', 'font', 'icon', 'hero', 'card', 'section'],\n  'nodejs-best-practices': ['node', 'server', 'api', 'endpoint', 'rest', 'handler', 'middleware', 'express'],\n  'nodejs-backend-patterns': ['backend', 'database', 'auth', 'session', 'cookie', 'jwt', 'prisma', 'supabase']\n};\nlet stdinData = '';\nprocess.stdin.on('data', d => stdinData += d);\nprocess.stdin.on('end', () => {\n  try {\n    const input = JSON.parse(stdinData);\n    const prompt = (input.prompt || '').toLowerCase();\n    const matched = Object.entries(skillMap)\n      .filter(([, keywords]) => keywords.some(kw => prompt.includes(kw)))\n      .map(([skill]) => skill);\n    if (matched.length > 0) {\n      console.log(JSON.stringify({\n        hookSpecificOutput: {\n          hookEventName: 'UserPromptSubmit',\n          additionalContext: 'SKILLS TO INVOKE: Before responding, call Skill() for each of these skills that apply to this task: ' + matched.join(', ') + '. Invoke them silently without announcing it, then respond.'\n        }\n      }));\n    }\n  } catch(e) {}\n});\n\"",
+            "timeout": 10,
+            "statusMessage": "Loading relevant skills..."
+          }
+        ]
+      }
+    ]
+  }
+}

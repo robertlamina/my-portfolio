@@ -92,26 +92,26 @@ export const resumeData: ResumeData = {
     "Experienced in leading technical integrations for major enterprise clients—including Globe Telecom, Jollibee, KROMA Entertainment, Rappit, and 917Ventures—with deep expertise in Node.js, PHP/Laravel, React, Vue.js, NoSQL/MongoDB, and Google Cloud Platform (GCP)."
   ],
   location: "Philippines (Available for Remote Worldwide)",
-  email: "johnrobertcruda@gmail.com",
+  email: "johnrobertlamina@gmail.com",
   status: "Available for new opportunities",
   resumeUrl: "https://docs.google.com/document/d/1_16f_jJx8agdvmunT6sxl8PAtFFRDKR6/edit?usp=sharing",
   socials: [
     {
       platform: "GitHub",
-      url: "https://github.com/jcruda",
-      username: "jcruda",
+      url: "https://github.com/robertlamina",
+      username: "robertlamina",
       icon: "Github"
     },
     {
       platform: "LinkedIn",
-      url: "https://linkedin.com/in/johnrobertcruda",
+      url: "https://linkedin.com/in/john-robert-cruda",
       username: "johnrobertcruda",
       icon: "Linkedin"
     },
     {
       platform: "Email",
-      url: "mailto:johnrobertcruda@gmail.com",
-      username: "johnrobertcruda@gmail.com",
+      url: "mailto:johnrobertlamina@gmail.com",
+      username: "johnrobertlamina@gmail.com",
       icon: "Mail"
     }
   ],
